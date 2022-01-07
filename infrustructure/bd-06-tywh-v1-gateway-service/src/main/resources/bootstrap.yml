@@ -1,0 +1,23 @@
+server:
+  port: 15000
+  servlet:
+    context-path: /gateway
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: bd-06-tywh-v1-gateway-service
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          # 开启从注册中心动态创建路由的功能，利用微服务名称j进行路由
+          enabled: true
+      routes:
+        - id: demoaa
+          uri: lb://bd-06-demoaa-v1
+          predicates:
+            - Path=/tywh/demoaa/**
+          filters:
+            - StripPrefix=1

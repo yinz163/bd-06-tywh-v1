@@ -1,0 +1,40 @@
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**
+!**/src/test/**
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+
+### VS Code ###
+.vscode/
+common/common-util/src/main/resources/
+common/common-util/src/test/
+common/service-base/src/main/resources/
+common/service-base/src/test/
+common/spring_security/src/main/resources/
+common/spring_security/src/test/
+infrustructure/bd-06-tywh-v1-gateway-service/src/test/
+service/bd-06-activiti-v1/src/test/
+service/demobb/src/test/

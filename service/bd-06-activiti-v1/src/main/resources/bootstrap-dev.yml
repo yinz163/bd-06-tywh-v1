@@ -1,0 +1,43 @@
+spring:
+  profiles:
+    active: activiti
+  cloud:
+    #nacos配置
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+
+  activiti:
+    database-schema-update: true
+    check-process-definitions: false
+  #  redis:
+#    host: 127.0.0.1
+#    port: 6379
+#    database: 0
+#    timeout: 1800000
+  #数据库连接池配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/actDemo?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC&nullCatalogMeansCurrent=true
+    username: root
+    password: root
+    #druid配置
+    druid:
+      initial-size: 5
+      max-active: 20
+      max-evictable-idle-time-millis: 900000
+      max-pool-prepared-statement-per-connection-size: 100
+      max-wait: 60000
+      min-evictable-idle-time-millis: 600000
+      min-idle: 10
+      pool-prepared-statements: false
+      test-on-borrow: true
+      test-on-return: true
+      test-while-idle: true
+      validation-query: select 1
+      validation-query-timeout: 6000
+
+#开发环境打印mybatis-plus 日志到控制台
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

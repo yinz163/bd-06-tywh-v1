@@ -1,0 +1,6 @@
+spring:
+  cloud:
+    #nacos配置
+    nacos:
+      discovery:
+        server-addr: localhost:8848
